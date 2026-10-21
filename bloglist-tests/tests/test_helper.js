@@ -1,16 +1,16 @@
-const SERVER_URL = 'http://localhost:3001'
+const SERVER_URL = 'http://localhost:3000'
 
 export const resetDatabase = async request => {
   await request.post(`${SERVER_URL}/api/testing/reset`)
 }
 
 export const createUser = async (request, user) => {
-  const response = await request.post(`${SERVER_URL}/api/users`, { data: user })
+  const response = await request.post(`${SERVER_URL}/api/users/register`, { data: user })
   return response.json()
 }
 
 export const apiLogin = async (request, credentials) => {
-  const response = await request.post(`${SERVER_URL}/api/login`, { data: credentials })
+  const response = await request.post(`${SERVER_URL}/api/users/login`, { data: credentials })
   return response.json()
 }
 
