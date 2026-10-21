@@ -16,10 +16,10 @@ jobs:
           - 27017:27017
 
     env:
-      NODE_ENV: test
-      PORT: 3001
-      SECRET: ci-test-secret
-      TEST_MONGODB_URI: mongodb://localhost:27017/bloglist-test
+     NODE_ENV: test
+     PORT: 3000
+     JWT_SECRET: ci-test-secret
+     MONGODB_URI: mongodb://localhost:27017/bloglist-test
 
     steps:
       - uses: actions/checkout@v4
